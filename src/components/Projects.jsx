@@ -8,35 +8,36 @@ import { useEffect, useRef } from "react";
 
 export const projects = [
   {
-    title: "Wawatmos",
-    url: "https://r3f-wawatmos-final.vercel.app/",
-    image: "projects/wawatmos.jpg",
-    description: "Recreating the Atmos Awwwards website with React Three Fiber",
+    title: "TalkGpt",
+    url: "https://talk-gpt-topaz.vercel.app/",
+    image: "projects/talk-gpt.png",
+    description: "Created a chatgpt clone with voice recognition",
+  },
+    {
+    title: "Google clone",
+    url: "https://google-clone-next-js-react.vercel.app/",
+    image: "projects/google-clone.png",
+    description: "Created a google clone search engine",
   },
   {
-    title: "Portfolio Baking",
-    url: "https://www.youtube.com/watch?v=YkHqpqJgLKw",
-    image: "projects/baking.jpg",
-    description: "Learn how to bake a 3D model with Blender and use it in r3f",
+    title: "Word Scrammble",
+    url: "https://react-word-scramble-game.vercel.app/",
+    image: "projects/word-scramble.png",
+    description: "Word scramble react game",
   },
   {
-    title: "3D Avatar",
-    url: "https://www.youtube.com/watch?v=pGMKIyALcK0",
-    image: "projects/avatar.jpg",
-    description: "Learn how to use ReadyPlayerMe to create a 3D avatar",
+    title: "Voice to Note",
+    url: "https://voice-to-text-note.vercel.app/",
+    image: "projects/voicetonotes.png",
+    description: "Todo text note with voice recognition",
   },
   {
-    title: "Kanagame",
-    url: "https://www.youtube.com/watch?v=zwNF1-lsia8",
-    image: "projects/kanagame.jpg",
-    description: "Use React Three Fiber to create a 3D game",
+    title: "Juks UI",
+    url: "https://jukscomp.vercel.app/",
+    image: "projects/juks.png",
+    description: "",
   },
-  {
-    title: "Loader",
-    url: "https://www.youtube.com/watch?v=L12wIvuZTOY",
-    image: "projects/loader.jpg",
-    description: "Create a loading screen for your r3f projects",
-  },
+ 
 ];
 
 const Project = (props) => {
@@ -46,22 +47,23 @@ const Project = (props) => {
   const bgOpacity = useMotionValue(0.4);
 
   useEffect(() => {
-    animate(bgOpacity, highlighted ? 0.7 : 0.4);
+    animate(bgOpacity, highlighted ? 1 : 0.5);
   }, [highlighted]);
 
   useFrame(() => {
     background.current.material.opacity = bgOpacity.get();
   });
 
+
   return (
-    <group {...props}>
+    <group {...props} >
       <mesh
         position-z={-0.001}
         onClick={() => window.open(project.url, "_blank")}
         ref={background}
       >
         <planeGeometry args={[2.2, 2]} />
-        <meshBasicMaterial color="purple" transparent opacity={0.4} />
+        <meshBasicMaterial color="black" transparent opacity={1} />
       </mesh>
       <Image
         scale={[2, 1.2, 1]}
@@ -80,7 +82,7 @@ const Project = (props) => {
         {project.title.toUpperCase()}
       </Text>
       <Text
-        maxWidth={2}
+        maxWidth={3}
         anchorX="left"
         anchorY="top"
         fontSize={0.1}
