@@ -47,7 +47,7 @@ const AboutSection = (props) => {
   return (
     <Section mobileTop>
       <h4 className="flex flex-col text-xl md:text-2xl  text-gray-500 font-bold leading-snug">
-        Hello wrld
+        Hello world 👋, 
         
        <p className="flex flex-row py-2">
          <span className="text-2xl md:text-3xl bg-purple-500 rounded-lg rounded-tr-none rounded-br-none text-white  px-2">I'm</span>
@@ -56,7 +56,7 @@ const AboutSection = (props) => {
        </p>
       </h4>
       <motion.p
-        className="text-lg text-gray-600 mt-4 "
+        className="text-lg text-gray-600 mt-4 md:w-[32%]"
         initial={{
           opacity: 0,
           y: 25,
@@ -70,7 +70,7 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        Fronted Software Dev, ⚛️ReactJS 🪄NextJS13 🧃JS 🐙Git ✍️ ShellScripting ☕ NodeJS 💅TailwindCSS 🐍Python, 
+        Fronted Software Dev, ⚛️ReactJS 🪄 NextJS13 🧃JS 🐙Git ✍️ ShellScripting ☕ NodeJS 💅TailwindCSS 🐍Python, 
         <br/>
         Iam a bugHaterBugHunter 🚀 @alx_africa
       </motion.p>
@@ -297,7 +297,8 @@ const ContactSection = () => {
           <textarea
             name="message"
             id="message"
-            className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
+            
+            className="resize-none h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
           />
           <button className="bg-purple-500 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 ">
             Submit

@@ -6,8 +6,19 @@
   width: 100vw;
   height: 100vh;
 }
-
+*{
+    object-fit: cover;
+    object-position: top;
+}
 body {
   margin: 0;
   background: #000;
+  object-fit: cover;
+  object-position: top;
+}
+
+.imgshadow{
+  object-position: top;
+  object-fit: cover;
+  box-shadow:  -6px -6px 12px rgba(107, 114, 128, 1),  6px 6px 12px rgba(107,114,128, 1);
 }
