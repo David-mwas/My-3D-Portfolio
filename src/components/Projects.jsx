@@ -12,12 +12,19 @@ export const projects = [
     url: "https://talk-gpt-topaz.vercel.app/",
     image: "projects/talk-gpt.png",
     description: "Created a chatgpt clone with voice recognition",
+    
   },
     {
     title: "Google clone",
     url: "https://google-clone-next-js-react.vercel.app/",
     image: "projects/google-clone.png",
     description: "Created a google clone search engine",
+  },
+    {
+    title: "MY Portfolio",
+    url: "https://david-mwas.vercel.app/",
+    image: "projects/portfolio.png",
+    description: "Created a 3D portfolio",
   },
   {
     title: "Word Scrammble",
@@ -35,7 +42,7 @@ export const projects = [
     title: "Juks UI",
     url: "https://jukscomp.vercel.app/",
     image: "projects/juks.png",
-    description: "",
+    description: "Social media app UI",
   },
  
 ];

@@ -70,7 +70,7 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        Fronted Software Dev, ⚛️ReactJS 🪄 NextJS13 🧃JS 🐙Git ✍️ ShellScripting ☕ NodeJS 💅TailwindCSS 🐍Python, 
+        Fronted Software Developer, ⚛️ReactJS ✨ NextJS13 🧃JS 🐙Git ✍️ ShellScripting ☕ NodeJS 💅TailwindCSS 🐍Python, 
         <br/>
         Iam a bugHaterBugHunter 🚀 @alx_africa
       </motion.p>
