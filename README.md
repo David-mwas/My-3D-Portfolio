@@ -2,7 +2,7 @@
 
 ## WELCOME TO DAVID-MWAS PORTFOLIO🚀
 
-![Alt text](portfolio.png)
+![Alt text](public/projects/portfolio.png)
 
 My personal portfolio is initialized with Vite + React framework
 
