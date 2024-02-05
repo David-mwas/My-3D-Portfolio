@@ -70,9 +70,9 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        Fronted Software Developer, ⚛️ReactJS ✨ NextJS13 🧃JS 🐙Git ✍️ ShellScripting ☕ NodeJS 💅TailwindCSS 🐍Python, 
+        Fronted Software Developer, ⚛️ReactJS ✨ NextJS13 React Native 🧃JS 🐙Git ✍️ ShellScripting ☕ NodeJS 💅TailwindCSS 🐍Python, 
         <br/>
-        Iam a bugHaterBugHunter 🚀 @alx_africa
+        Iam a bugHaterBugHunter 🚀 @alxambassador
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
