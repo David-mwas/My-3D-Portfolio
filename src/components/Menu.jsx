@@ -24,7 +24,7 @@ export const Menu = (props) => {
         />
       </button>
       <div
-        className={`z-10 fixed top-0 right-0 bottom-0 bg-gray-500 transition-all overflow-hidden flex flex-col
+        className={`z-10 fixed top-0 right-0 bottom-0 bg-slate-500 transition-all overflow-hidden flex flex-col
       ${menuOpened ? " w-full md:w-80" : "w-0"}`}
       >
         <div className="flex-1 flex items-start justify-center flex-col gap-6 p-8">

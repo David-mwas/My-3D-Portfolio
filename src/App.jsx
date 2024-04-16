@@ -10,19 +10,21 @@ import { Menu } from "./components/Menu";
 import { ScrollManager } from "./components/ScrollManager";
 import { framerMotionConfig } from "./config";
 import LoadingScreen from "./components/LoadingScreen";
+import toast, { Toaster } from "react-hot-toast";
 
 function App() {
   const [section, setSection] = useState(0);
   const [started, setStarted] = useState(false);
   const [menuOpened, setMenuOpened] = useState(false);
-
+ 
   useEffect(() => {
     setMenuOpened(false);
   }, [section]);
 
   return (
     <>
-      <LoadingScreen started={started} setStarted={ setStarted} />
+      <Toaster />
+      <LoadingScreen started={started} setStarted={setStarted} />
       <MotionConfig
         transition={{
           ...framerMotionConfig,
@@ -41,7 +43,10 @@ function App() {
             </Scroll>
             <Scroll html>
               {started && (
-                <Interface setSection={setSection} />
+                <Interface
+                  setSection={setSection}
+                  
+                />
               )}
             </Scroll>
           </ScrollControls>
