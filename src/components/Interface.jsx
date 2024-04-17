@@ -161,14 +161,6 @@ const skills = [
     level: 80,
   },
 ];
-// const languages = [
-
-//   {
-//     title: "🇺🇸 English",
-//     level: 80,
-//   },
-
-// ];
 
 const SkillsSection = () => {
   return (
@@ -280,7 +272,6 @@ const ContactSection = () => {
       )
       .then((response) => {
         toast.success("Email sent successfully:", { id: notify() });
-        console.log("Email sent successfully:", response);
       })
       .catch((error) => {
         toast.error(`Error sending email: ${error}`, { id: notify() });
@@ -289,13 +280,8 @@ const ContactSection = () => {
       .finally(() => {
         setName("");
         setMessage("");
-        // window.location.href = "/#";
+  
       });
-
-    // window
-    //   .open(
-    //     `mailto:dmwas704@gmail.com?subject=Message from ${name}&body=${message}`
-    //   )
   };
   return (
     <Section>
@@ -303,10 +289,6 @@ const ContactSection = () => {
       <h2 className="text-3xl font-bold uppercase">Contact me</h2>
       <div className="mt-8 p-8 rounded-md bg-white bg-opacity-40 w-96 max-w-full">
         <form
-        // onSubmit={handleSubmit}
-        // method="post"
-        // action={`mailto:https://dmwas704@gmail.com?subject=Message from ${name}&body=${message}`}
-        // encType="multipart/form-data"
         >
           <label
             htmlFor="name"

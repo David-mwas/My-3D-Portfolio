@@ -20,7 +20,6 @@ export const Experience = (props) => {
   const { viewport } = useThree();
   const data = useScroll();
 
-  console.log(viewport.width, viewport.height);
   const isMobile = window.innerWidth < 768;
   const responsiveRatio = viewport.width / 12;
   const officeScaleRatio =Math.max(0.5, Math.min(0.9 * responsiveRatio,0.9));
@@ -68,14 +67,8 @@ export const Experience = (props) => {
     if(section===0){
       characterContainerAboutRef.current.getWorldPosition(characterGroup.current.position);
     }
-    // console.log([position.x, position.y, position.z]);
+    
 
-    // const quaternion = new THREE.Quaternion();
-    // characterContainerAboutRef.current.getWorldQuaternion(quaternion);
-    // const euler = new THREE.Euler();
-    // euler.setFromQuaternion(quaternion, "XYZ");
-
-    // console.log([euler.x, euler.y, euler.z]);
   });
 
   return (
