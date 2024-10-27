@@ -1,0 +1,66 @@
+{
+  "main": {
+    "name": "David Mwangi Wanjiru",
+    "occupation": "Frontend Developer && Technical Lead @MMUSTihub",
+    "description": "",
+    "image": "mwas1.webp",
+    "bio": "I'm a Frontend Software Developer proficient in ReactJS, Next.js, and Tailwind CSS. With expertise in JavaScript and Node.js, I craft seamless web experiences and responsive designs. Skilled in Git and Python, I prioritize software quality and efficient workflows. Passionate about bug tracking and resolution, I'm committed to excellence in software development. Currently I'm The Frontend Developer and Technical Lead @MMUSTihub, I'm dedicated to continuous learning and innovation.",
+    "contactmessage": "Get in touch with me",
+    "email": "dmwas704@gmail.com",
+    "phone": "+254 795290373",
+    "address": {
+      "street": "Naivasha Town",
+      "city": "Nakuru",
+      "state": "Kenya",
+      "zip": "20117"
+    },
+    "website": "https://david-mwas.me",
+    "resumedownload": "https://david-mwas.me/DAVIDMWANGIWANJIRU%20CVLTS.pdf",
+    "social": [
+      {
+        "name": "github",
+        "url": "https://github.com/David-mwas",
+        "className": "fa fa-github"
+      },
+      {
+        "name": "gtwitter",
+        "url": "https://x.com/DavidMwas2_0",
+        "className": "fa fa-twitter"
+      },
+
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/david-mwas-a57186235/",
+        "className": "fa fa-linkedin"
+      }
+    ]
+  },
+  "resume": {
+    "skillmessage": "My Programming Language Proficiency",
+    "education": [
+      {
+        "school": "Masinde Murilo University Of Science And Technology",
+        "degree": "Bachelor's Degree, Information Technology",
+        "graduated": "Final Year",
+        "description": "Currently Am On My Final Year"
+      }
+    ],
+    "work": [
+      {
+        "company": "MMUSTihub",
+        "title": "Frontend Developer && Technical Lead",
+        "years": "May 2023 - Present",
+        "description": "..."
+      }
+    ]
+  },
+
+  "testimonials": {
+    "testimonials": [
+      {
+        "text": "David is absolutely excellent, his depth of knowledge & his mentorship really meant a lot to us... I would definitely recommend",
+        "user": "Binary Brigades"
+      }
+    ]
+  }
+}

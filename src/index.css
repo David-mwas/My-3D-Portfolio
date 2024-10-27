@@ -1,24 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-#root {
-  width: 100vw;
-  height: 100vh;
-}
-*{
-    object-fit: cover;
-    object-position: top;
-}
-body {
-  margin: 0;
-  background: #000;
-  object-fit: cover;
-  object-position: top;
+.hero {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row;
+  background: red !important;
 }
 
-.imgshadow{
-  object-position: top;
-  object-fit: cover;
-  box-shadow:  -6px -6px 12px rgba(107, 114, 128, 1),  6px 6px 12px rgba(107,114,128, 1);
-}
