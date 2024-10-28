@@ -17,13 +17,19 @@ function Home() {
   const [token, setToken] = useState(
     localStorage.getItem("token") || process.env.REACT_APP_TOKEN
   );
+  // console.log(process.env.REACT_APP_PUBLIC_URL);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     fetch("/resumeData.json")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to load resume data");
+        return res.json();
+      })
       .then((data) => {
+        console.log(data);
         setResumeData(data);
-      });
+      })
+      .catch((err) => console.error(err.message));
   }, []);
 
   // Fetch all projects on component mount

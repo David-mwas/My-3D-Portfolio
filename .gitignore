@@ -23,3 +23,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# json
+public\resumeData.json
+/public/resumeData.json

@@ -1,39 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <link rel="shortcut icon" href="%PUBLIC_URL%/images/mwas.webp">
-  <link rel="stylesheet" href="%PUBLIC_URL%/css/default.css">
-  <link rel="stylesheet" href="%PUBLIC_URL%/css/layout.css">
-  <link rel="stylesheet" href="%PUBLIC_URL%/css/media-queries.css">
-  <link rel="stylesheet" href="%PUBLIC_URL%/css/magnific-popup.css">
+    <!-- Basic SEO Meta Tags -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="title" content="David Mwas - Professional Portfolio" />
+    <meta
+      name="description"
+      content="Welcome to David Mwas's portfolio. Explore my projects, skills, and experiences in web development, photography, and software engineering."
+    />
+    <meta
+      name="keywords"
+      content="David Mwas, portfolio, web development, software engineering, photography, projects, skills"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="David Mwas" />
 
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://david-mwas.me/" />
+    <meta property="og:title" content="David Mwas - Professional Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore the portfolio of David Mwas, showcasing projects, skills, and experiences in web development and photography."
+    />
+    <meta
+      property="og:image"
+      content="https://david-mwas.me/images/mwas.webp"
+    />
 
-  <title>DavidMwas</title>
-</head>
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://david-mwas.me/" />
+    <meta
+      property="twitter:title"
+      content="David Mwas - Professional Portfolio"
+    />
+    <meta
+      property="twitter:description"
+      content="Explore the portfolio of David Mwas, showcasing projects, skills, and experiences in web development and photography."
+    />
+    <meta
+      property="twitter:image"
+      content="https://david-mwas.me/images/mwas.webp"
+    />
 
-<body>
-  <noscript>
-    You need to enable JavaScript to run this app.
-  </noscript>
-  <div id="root"></div>
+    <!-- Structured Data for SEO (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "David Mwas",
+        "url": "https://david-mwas.me/",
+        "image": "https://david-mwas.me/images/mwas.webp",
+        "sameAs": [
+          "https://www.linkedin.com/in/davidmwas",
+          "https://github.com/davidmwas",
+          "https://twitter.com/davidmwas"
+        ],
+        "jobTitle": "Web Developer & Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "MMUSTIHUB"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "MMUST"
+        },
+        "knowsAbout": [
+          "Web Development",
+          "Software Engineering",
+          "Mobile Developer"
+        ],
+        "description": "Professional portfolio of David Mwas showcasing projects, skills, and experiences in web development, mobile development, and software engineering."
+      }
+    </script>
 
+    <!-- Link Prefetching and Preloading for Performance Optimization -->
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/resumeData.json"
+      as="fetch"
+      type="application/json"
+      crossorigin="anonymous"
+    />
 
+    <!-- Prefetch for non-critical idle time loading -->
+    <link
+      rel="prefetch"
+      href="%PUBLIC_URL%/resumeData.json"
+      as="fetch"
+      type="application/json"
+      crossorigin="anonymous"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preload" href="%PUBLIC_URL%/css/default.css" as="style" />
+    <link rel="preload" href="%PUBLIC_URL%/css/layout.css" as="style" />
+    <link rel="preload" href="%PUBLIC_URL%/css/media-queries.css" as="style" />
+    <link rel="preload" href="%PUBLIC_URL%/css/magnific-popup.css" as="style" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/default.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/layout.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/media-queries.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/magnific-popup.css" />
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-  <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="%PUBLIC_URL%/images/mwas.webp" />
 
-  <script src="js/jquery.flexslider.js"></script>
-  <script src="js/waypoints.js"></script>
-  <script src="js/jquery.fittext.js"></script>
-  <script src="js/magnific-popup.js"></script>
-  <script src="js/init.js"></script>
+    <!-- Title -->
+    <title>David Mwas - Professional Portfolio</title>
+  </head>
 
-</body>
+  <body>
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <div id="root"></div>
 
+    <!-- Scripts with async and defer attributes for non-blocking loading -->
+    <script
+      async
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    ></script>
+    <script src="js/jquery-1.10.2.min.js" defer></script>
+    <script src="js/jquery-migrate-1.2.1.min.js" defer></script>
+    <script src="js/jquery.flexslider.js" defer></script>
+    <script src="js/waypoints.js" defer></script>
+    <script src="js/jquery.fittext.js" defer></script>
+    <script src="js/magnific-popup.js" defer></script>
+    <script src="js/init.js" defer></script>
+  </body>
 </html>

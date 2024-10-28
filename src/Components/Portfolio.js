@@ -43,7 +43,7 @@ const Portfolio = ({ data, loading }) => {
                   rel="noopener noreferrer"
                   className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400 hover:text-white cursor-pointer"
                 >
-                  <i class="fa fa-link" aria-hidden="true"></i> View Live
+                  <i className="fa fa-link" aria-hidden="true"></i> View Live
                 </a>
               </div>
             </div>

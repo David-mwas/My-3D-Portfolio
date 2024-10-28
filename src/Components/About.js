@@ -55,7 +55,7 @@ const About = ({ data }) => {
                   rel="noreferrer"
                   id="cv"
                 >
-                  <i class="fa fa-eye" aria-hidden="true"></i>View Curriculum
+                  <i className="fa fa-eye" aria-hidden="true"></i>View Curriculum
                   Vitae(CV)
                 </a>
               </p>
