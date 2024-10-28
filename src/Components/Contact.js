@@ -19,7 +19,7 @@ const Contact = ({ data }) => {
 
   const submitForm = () => {
     window.open(
-      `mailto:${contactEmail}?subject=${encodeURIComponent(
+      `mailto:${email}?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(name)} (${encodeURIComponent(
         email
