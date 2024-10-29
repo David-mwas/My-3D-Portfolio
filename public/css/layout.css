@@ -29,6 +29,48 @@ body {
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
+.vertical-timeline {
+  position: relative;
+  padding-left: 20px; /* Space for the line */
+}
+
+.vertical-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px; /* Adjust this to move the line closer or further from the items */
+  width: 2px; /* Line width */
+  background: linear-gradient(to bottom, #6a5acd, #b0e0e6); /* Gradient color */
+}
+
+.work-item {
+  position: relative;
+  margin-bottom: 20px; /* Space between items */
+  padding-left: 30px; /* Space to keep text from overlapping with the line */
+}
+
+.work-item h3 {
+  margin: 0; /* Remove default margin */
+}
+
+.circle {
+  position: absolute;
+  left: -25px; /* Adjust this to position the circle */
+  top: 0;
+  width: 30px; /* Circle diameter */
+  height: 30px; /* Circle diameter */
+  border-radius: 50%; /* Make it circular */
+  background-color: white; 
+  border: 2px solid #6a5acd; /* Circle color */
+  /* Circle color */
+  color: blueviolet; /* Text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px; /* Adjust font size */
+}
 
 header {
   position: relative;
@@ -338,11 +380,15 @@ ul#nav li.current a {
   padding-bottom: 24px;
   border-bottom: 1px solid #e8e8e8;
 }
+.work ul li{
+  list-style: disc;
+}
 #resume .info {
   font: 16px/24px "librebaskerville-italic", serif;
   color: #6e7881;
   margin-bottom: 18px;
   margin-top: 9px;
+  font-weight: 600;
 }
 #resume .info span {
   margin-right: 5px;
