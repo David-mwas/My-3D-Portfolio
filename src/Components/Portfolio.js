@@ -30,7 +30,7 @@ const Portfolio = ({ data, loading }) => {
                 <p className="text-gray-600">{project?.tabs}</p>
               </div>
 
-              <div className="flex space-x-4">
+              <div id="livelinks" className="flex space-x-4">
                 <a
                   href={project.githublink}
                   target="_blank"
@@ -43,7 +43,7 @@ const Portfolio = ({ data, loading }) => {
                   href={project.livelink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400 hover:text-white cursor-pointer"
+                  className="bg-[blueviolet] text-white px-4 py-2 rounded hover:bg-[blueviolet]/75 hover:text-white cursor-pointer"
                 >
                   <i className="fa fa-link" aria-hidden="true"></i> View Live
                 </a>

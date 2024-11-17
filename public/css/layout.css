@@ -35,7 +35,7 @@ body {
 }
 
 .vertical-timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -61,7 +61,7 @@ body {
   width: 30px; /* Circle diameter */
   height: 30px; /* Circle diameter */
   border-radius: 50%; /* Make it circular */
-  background-color: white; 
+  background-color: white;
   border: 2px solid #6a5acd; /* Circle color */
   /* Circle color */
   color: blueviolet; /* Text color */
@@ -86,16 +86,15 @@ header {
   text-align: center;
   overflow: hidden;
 }
-#occupation{
- color: #a8a8a8;
- transition: all 0.3s ease-in-out;
-
-}#occupation:hover{
+#occupation {
+  color: #a8a8a8;
+  transition: all 0.3s ease-in-out;
+}
+#occupation:hover {
   color: blueviolet;
-   border-bottom: 1px solid blueviolet;
+  border-bottom: 1px solid blueviolet;
 }
 #mwas {
-  
   width: 230px;
   height: 230px;
   border-radius: 50%;
@@ -153,7 +152,7 @@ header .banner-text hr {
   border-color: #2f2d2e;
   border-color: rgba(250, 250, 250, 0.2);
 }
-.tech{
+.tech {
   width: 100%;
   font-size: 14px;
   font-weight: 500;
@@ -196,6 +195,13 @@ header .scrolldown a {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#livelinks a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 header .scrolldown a:hover {
@@ -380,7 +386,7 @@ ul#nav li.current a {
   padding-bottom: 24px;
   border-bottom: 1px solid #e8e8e8;
 }
-.work ul li{
+.work ul li {
   list-style: disc;
 }
 #resume .info {
@@ -774,7 +780,8 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #testimonials {
-  background: #1f1f1f url("../images/testimonials-bg.webp") no-repeat center center;
+  background: #1f1f1f url("../images/testimonials-bg.webp") no-repeat center
+    center;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   background-attachment: fixed;
@@ -1198,5 +1205,3 @@ footer .social-links li:first-child {
 #go-top a:hover {
   background-color: blueviolet;
 }
-
-
