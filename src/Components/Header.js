@@ -78,7 +78,7 @@ const Header = ({ data }) => {
 
       <div className="row banner">
         <div
-          className="bg-top rounded-full bg-no-repeat shadow-custom-blueviolet order-1 justify-self-center bg-cover  w-[150px] h-[150px] md:w-[250px] md:h-[250px] p-1 animate-profile-animate"
+          className="bg-top rounded-full bg-no-repeat shadow-custom-blueviolet order-1 justify-self-center bg-cover  w-[160px] h-[150px] md:w-[260px] md:h-[250px] p-1 animate-profile-animate"
           style={{ backgroundImage: `url(/images/mwas.webp)` }}
         >
           {/* <img src="/images/mwas.jpg" alt="mwas pic" id="mwas" /> */}

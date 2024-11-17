@@ -9,17 +9,19 @@ const Portfolio = ({ data, loading }) => {
         : "https://via.placeholder.com/400x300"; // Placeholder if image is missing
 
       return (
-        <div key={project.title} className="w-full sm:w-1/2 lg:w-1/3 p-4">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+        <div key={project.title} className="w-full">
+          <div className="shadow-xl rounded-lg overflow-hidden bg-white w-full h-[400px] group hover:scale-105   transition-all duration-300 ease-in-out">
             <img
               alt={project.title}
               src={projectImage}
-              className="w-full h-56 object-cover"
+              className="w-full h-56 object-cover group-hover:scale-95 transition-all duration-300 ease-in-out"
             />
             <div className="p-6">
               <h3 className="font-extrabold mb-2 text-3xl">{project.title}</h3>
               <p className="text-gray-700 mb-2">{project.category}</p>
-              <p className="text-gray-600 mb-4">{project.description}</p>
+              <p className="text-gray-600 mb-4 line-clamp-3">
+                {project.description}
+              </p>
 
               <div className="mb-4">
                 <p className="font-bold text-[20px] text-gray-600">
@@ -54,17 +56,20 @@ const Portfolio = ({ data, loading }) => {
   }
 
   return (
-    <section id="portfolio" className="py-4 px-2">
-      <div className="container mx-auto">
+    <section
+      id="portfolio"
+      className="w-full py-4 px-2 flex flex-col justify-center items-center"
+    >
+      <div className=" w-full flex flex-col justify-center items-center">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-extrabold">
+          <h2 className="text-4xl font-extrabold">
             Check Out Some of My Works
-          </h1>
+          </h2>
         </div>
         {loading ? (
           <p>loading... </p>
         ) : (
-          <div className="flex flex-wrap -m-4">
+          <div className="w-full lg:w-[80%] grid grid-cols-1 lg:grid-cols-3 gap-8">
             {projects ? (
               projects
             ) : (
