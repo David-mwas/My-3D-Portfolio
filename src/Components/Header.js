@@ -1,13 +1,13 @@
 import React from "react";
-import TypeWriter from "react-typewriter";
+// import TypeWriter from "react-typewriter";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
   SiTypescript,
   SiJavascript,
   SiNextdotjs,
   SiMongodb,
-  SiReact,
 } from "react-icons/si";
+import { FaGolang } from "react-icons/fa6";
 
 const techStack = [
   { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
@@ -17,6 +17,7 @@ const techStack = [
   { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
   { name: "React Native", icon: <FaReact />, color: "#61DAFB" },
   { name: "MERN", icon: <SiMongodb />, color: "#47A248" },
+  { name: "GoLang", icon: <FaGolang />, color: "#61DAFB" },
 ];
 
 const Header = ({ data }) => {
@@ -106,7 +107,7 @@ const Header = ({ data }) => {
                 className="badge flex items-center font-[500] px-4 py-2 rounded-md text-base transition duration-300 ease-in-out uppercase bg-[blueviolet] text-white"
               >
                 <span
-                  className="mr-2 text-xl"
+                  className="mr-2 text-3xl text-center shadow-xl shadow-black"
                   style={{ color: tech.color }} // Apply color only to the icon
                 >
                   {tech.icon}

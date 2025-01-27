@@ -780,7 +780,8 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #testimonials {
-  background: #1f1f1f url("../images/testimonials-bg.webp") no-repeat center
+  background: linear-gradient(rgba(22, 20, 21, 0.7), rgba(22, 20, 21, 0.99)),
+    url("../images/software-developer.webp") no-repeat center
     center;
   background-size: cover !important;
   -webkit-background-size: cover !important;

@@ -14,7 +14,7 @@ function Home() {
   const [projects, setProjects] = useState([]);
   // const token = process.env.REACT_APP_TOKEN;
 
-  const [token, setToken] = useState(
+  const [token] = useState(
     localStorage.getItem("token") || process.env.REACT_APP_TOKEN
   );
   // console.log(process.env.REACT_APP_PUBLIC_URL);
