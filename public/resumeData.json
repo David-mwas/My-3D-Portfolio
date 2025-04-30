@@ -15,7 +15,7 @@
       "zip": "20117"
     },
     "website": "https://david-mwas.me",
-    "resumedownload": "https://david-mwas.me/DavidMwangiWanjiruLTSCV.pdf",
+    "resumedownload": "https://david-mwas.vercel.app/DavidMwangiWanjiruLTSCV.pdf",
     "social": [
       {
         "name": "github",
@@ -62,8 +62,8 @@
   "testimonials": {
     "testimonials": [
       {
-        "text": "David is absolutely excellent, his depth of knowledge & his mentorship really meant a lot to us... I would definitely recommend",
-        "user": "Binary Brigades"
+        "text": "David was my talented workmate at MMUST-iHub, known for building clean, responsive web apps and bringing creative energy to every project. I would definitely recommend",
+        "user": "Michael Maina, Project Developer Lead@MMUSTihub"
       }
     ]
   }
