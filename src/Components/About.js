@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const About = ({ data }) => {
   if (data) {
@@ -15,16 +16,36 @@ const About = ({ data }) => {
   }
 
   return (
-    <section id="about">
+    <motion.section
+      id="about"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }} // Animates when section enters view
+      viewport={{ once: true }} // Animates only the first time
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       <div className="row">
-        <div className="three columns" id="small">
+        <motion.div
+          id="small"
+          className="three columns"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }} // Animates when this comes into view
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <img
             className="profile-pic"
             src={profilepic}
-            alt="Sonny's Profile Pic"
+            alt={`${name}'s Profile Pic`}
           />
-        </div>
-        <div className="nine columns main-col">
+        </motion.div>
+
+        <motion.div
+          className="nine columns main-col"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }} // Animates when this comes into view
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <h2>About Me</h2>
 
           <p>{bio}</p>
@@ -35,8 +56,7 @@ const About = ({ data }) => {
                 <span>{name}</span>
                 <br />
                 <span>
-                  <b>Street: </b>
-                  {street}
+                  <b>Street: </b> {street}
                   <br />
                   <b>City: </b> {city} {state}, {zip}
                 </span>
@@ -55,15 +75,15 @@ const About = ({ data }) => {
                   rel="noreferrer"
                   id="cv"
                 >
-                  <i className="fa fa-eye" aria-hidden="true"></i>View Curriculum
-                  Vitae(CV)
+                  <i className="fa fa-eye" aria-hidden="true"></i>View
+                  Curriculum Vitae (CV)
                 </a>
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

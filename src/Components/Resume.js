@@ -1,21 +1,35 @@
 import React from "react";
-import parse from "html-react-parser"; // Import parse
+import parse from "html-react-parser";
+import { motion } from "framer-motion";
 
 const Resume = ({ data }) => {
   if (data) {
     const education = data.education.map((edu) => (
-      <div key={edu.school}>
+      <motion.div
+        key={edu.school}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <h3>{edu.school}</h3>
         <p className="info">
           {edu.degree} <span>&bull;</span>
           <em className="date">{edu.graduated}</em>
         </p>
         <p>{edu.description}</p>
-      </div>
+      </motion.div>
     ));
 
     const work = data.work.map((job, index) => (
-      <div key={job.company} className="work-item">
+      <motion.div
+        key={job.company}
+        className="work-item"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <div className="circle">{index + 1}</div> {/* Numbering */}
         <h3>{job.company}</h3>
         <p className="info">
@@ -23,7 +37,7 @@ const Resume = ({ data }) => {
           <span>&bull;</span> <em className="date">{job.years}</em>
         </p>
         <p>{parse(job.description)}</p> {/* Wrap with parse */}
-      </div>
+      </motion.div>
     ));
 
     return (
@@ -36,7 +50,7 @@ const Resume = ({ data }) => {
           </div>
 
           <div className="nine columns main-col">
-            <div className="vertical-timeline md:right-[40px] ">{work}</div>
+            <div className="vertical-timeline md:right-[40px]">{work}</div>
           </div>
         </div>
 

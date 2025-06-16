@@ -1,15 +1,22 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Testimonials = ({ data }) => {
   if (data) {
-    var testimonials = data.testimonials.map(function (testimonials) {
+    var testimonials = data.testimonials.map(function (item, index) {
       return (
-        <li key={testimonials.user}>
+        <motion.li
+          key={item.user}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: index * 0.2 }}
+        >
           <blockquote>
-            <p>{testimonials.text}</p>
-            <cite>{testimonials.user}</cite>
+            <p>{item.text}</p>
+            <cite>{item.user}</cite>
           </blockquote>
-        </li>
+        </motion.li>
       );
     });
   }

@@ -1,2 +1,2 @@
 # David mwas portfolio
-### live @https://david-mwas.me
+### live @https://david-mwas.vercel.app

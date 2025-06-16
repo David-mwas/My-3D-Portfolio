@@ -1,15 +1,24 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Portfolio = ({ data, loading }) => {
   console.log(data);
+
   if (data) {
-    var projects = data?.map(function (project) {
+    var projects = data?.map(function (project, index) {
       var projectImage = project.imageUrls
         ? project.imageUrls[0]
-        : "https://via.placeholder.com/400x300"; // Placeholder if image is missing
+        : "https://via.placeholder.com/400x300";
 
       return (
-        <div key={project.title} className="w-full">
+        <motion.div
+          key={project.title}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: index * 0.2 }}
+          className="w-full"
+        >
           <div className="shadow-xl rounded-lg overflow-hidden bg-white w-full h-[400px] group hover:scale-105   transition-all duration-300 ease-in-out">
             <img
               alt={project.title}
@@ -37,20 +46,22 @@ const Portfolio = ({ data, loading }) => {
                   rel="noopener noreferrer"
                   className="bg-gray-600 text-white px-4 py-2 rounded cursor-pointer hover:bg-gray-500 hover:text-white"
                 >
-                  <i className="fa fa-github"></i> GitHub
+                  <i className="fa fa-github mr-1" aria-hidden="true"></i>{" "}
+                  GitHub
                 </a>
                 <a
                   href={project.livelink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[blueviolet] text-white px-4 py-2 rounded hover:bg-[blueviolet]/75 hover:text-white cursor-pointer"
+                  className="bg-[blueviolet] text-gray-50 px-4 py-2 rounded hover:bg-[blueviolet]/75 hover:text-gray-50 cursor-pointer"
                 >
-                  <i className="fa fa-link" aria-hidden="true"></i> View Live
+                  <i className="fa fa-link mr-1" aria-hidden="true"></i> View
+                  Live
                 </a>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       );
     });
   }
@@ -60,7 +71,7 @@ const Portfolio = ({ data, loading }) => {
       id="portfolio"
       className="w-full py-4 px-2 flex flex-col justify-center items-center"
     >
-      <div className=" w-full flex flex-col justify-center items-center">
+      <div className="w-full flex flex-col justify-center items-center">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-extrabold">
             Check Out Some of My Works

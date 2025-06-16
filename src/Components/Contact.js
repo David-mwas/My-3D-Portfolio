@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Contact = ({ data }) => {
   const [name, setName] = useState("");
@@ -17,7 +18,9 @@ const Contact = ({ data }) => {
     var contactMessage = data.contactmessage;
   }
 
-  const submitForm = () => {
+  const submitForm = (e) => {
+    e.preventDefault();
+
     window.open(
       `mailto:${email}?subject=${encodeURIComponent(
         subject
@@ -28,21 +31,45 @@ const Contact = ({ data }) => {
   };
 
   return (
-    <section id="contact">
+    <motion.section
+      id="contact"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       <div className="row section-head">
-        <div className="two columns header-col">
+        <motion.div
+          className="two columns header-col"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <h1>
             <span>Contact Me</span>
           </h1>
-        </div>
+        </motion.div>
 
-        <div className="ten columns">
+        <motion.div
+          className="ten columns"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <p className="lead">{contactMessage}</p>
-        </div>
+        </motion.div>
       </div>
 
       <div className="row">
-        <div className="eight columns">
+        <motion.div
+          className="eight columns"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <form onSubmit={submitForm}>
             <fieldset>
               <div>
@@ -107,14 +134,20 @@ const Contact = ({ data }) => {
             </fieldset>
           </form>
 
-          <div id="message-warning"> Error boy</div>
+          <div id="message-warning"> Error</div>
           <div id="message-success">
             <i className="fa fa-check"></i>Your message was sent, thank you!
             <br />
           </div>
-        </div>
+        </motion.div>
 
-        <aside className="four columns footer-widgets">
+        <motion.aside
+          className="four columns footer-widgets"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <div className="widget widget_contact">
             <h4>Address and Phone</h4>
             <p className="address">
@@ -129,9 +162,9 @@ const Contact = ({ data }) => {
               <span>{phone}</span>
             </p>
           </div>
-        </aside>
+        </motion.aside>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
