@@ -33,7 +33,7 @@ useEffect(() => {
 
       // Sort by time (e.g., createdAt descending)
       const sortedData = data.sort(
-        (a, b) => new Date(a.time).getTime() - new Date(b.time).getTime()
+        (a, b) => new Date(b.time).getTime() - new Date(a.time).getTime()
       );
 
       setProjects(sortedData);
