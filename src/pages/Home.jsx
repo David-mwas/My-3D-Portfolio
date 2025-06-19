@@ -52,7 +52,7 @@ function Home() {
 
       // Sort projects by createdAt descending
       const sortedData = data.sort(
-        (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        (a, b) => new Date(b.time).getTime() - new Date(a.time).getTime()
       );
 
       setProjects(sortedData);
