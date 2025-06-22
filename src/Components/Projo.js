@@ -10,33 +10,44 @@ const ProjectManagement = () => {
   const [time, setTime] = useState("");
   const [tabs, setTabs] = useState([]);
   const [imageFiles, setImageFiles] = useState([]); // To handle file uploads
-  // const [token, setToken] = useState(localStorage.getItem("token"));
+  
+  const [token] = useState(
+    localStorage.getItem("token") || process.env.REACT_APP_TOKEN
+  );
 
   // Fetch all projects on component mount
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await fetch(
-          "https://portfolio-cms-nine.vercel.app/api/v1/project/getall",
-          {
-            headers: {
-              Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRtd2FzNzA0QGdtYWlsLmNvbSIsImlhdCI6MTczMDAzMjAwNSwiZXhwIjoxNzYxNTg5NjA1LCJhdWQiOiI2NjIzOTM1Y2ZlMGI4ZDJiOTgyMjQ3Y2IiLCJpc3MiOiJhcHBsaWNhdGlvbiJ9.tg3k_cfvrYWi3FO8-6F1ethCuBXuWoJN8bx-HADoPXw`,
-            },
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch projects");
+useEffect(() => {
+  const fetchProjects = async () => {
+    try {
+      const response = await fetch(
+        "https://portfolio-cms-nine.vercel.app/api/v1/project/getall",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
+      );
 
-        const data = await response.json();
-        setProjects(data);
-      } catch (err) {
-        console.error(err.message);
+      if (!response.ok) {
+        throw new Error("Failed to fetch projects");
       }
-    };
-    fetchProjects();
-  }, []);
+
+      const data = await response.json();
+
+      // Sort by time (e.g., createdAt descending)
+      const sortedData = data.sort(
+        (a, b) => new Date(b.time).getTime() - new Date(a.time).getTime()
+      );
+
+      setProjects(sortedData);
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
+  fetchProjects();
+}, []);
+
 
   // Handle file input changes
   const handleFileChange = (e) => {

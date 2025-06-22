@@ -21,33 +21,38 @@ function Home() {
   const [loading, setLoading] = useState(false);
 
   // Fetch all projects on component mount
-  useEffect(() => {
-    setLoading(true);
-    const fetchProjects = async () => {
-      try {
-        const response = await fetch(
-          "https://portfolio-cms-nine.vercel.app/api/v1/project/getall",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch projects");
+ useEffect(() => {
+  setLoading(true);
+  const fetchProjects = async () => {
+    try {
+      const response = await fetch(
+        "https://portfolio-cms-nine.vercel.app/api/v1/project/getall",
+        {
+          headers: { Authorization: `Bearer ${token}` },
         }
+      );
 
-        const data = await response.json();
-        setProjects(data);
-        setLoading(false);
-      } catch (err) {
-        setLoading(false);
-        console.error(err.message);
-      } finally {
-        setLoading(false);
+      if (!response.ok) {
+        throw new Error("Failed to fetch projects");
       }
-    };
-    fetchProjects();
-  }, [token]);
+
+      const data = await response.json();
+
+      // Sort projects by createdAt descending
+      const sortedData = data.sort(
+        (a, b) => new Date(b.time).getTime() - new Date(a.time).getTime()
+      );
+
+      setProjects(sortedData);
+    } catch (err) {
+      console.error(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchProjects();
+}, [token]);
   return (
     <div className="App overflow-x-hidden">
       <Header data={resumeData.main} />
