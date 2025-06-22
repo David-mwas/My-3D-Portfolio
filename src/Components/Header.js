@@ -23,7 +23,7 @@ const techStack = [
 ];
 
 const Header = ({ data }) => {
-  // const name = data?.name;
+  const name = data?.name;
   const occupation = data?.occupation;
   const description = data?.description;
   const city = data?.address?.city;
@@ -197,7 +197,7 @@ const Header = ({ data }) => {
 
         <div className="banner-text mt-6">
           <h1 ref={nameRef} className="responsive-headline w-full">
-            I'm David Mwangi Wanjiru
+            I'm {name}
           </h1>
 
           <h3 ref={textRef}>

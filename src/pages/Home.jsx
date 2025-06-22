@@ -9,8 +9,8 @@ import Testimonials from "../Components/Testimonials";
 import Portfolio from "../Components/Portfolio";
 import "../App.css";
 
+import { resumeData } from "../contantData/resumeData"; // Assuming you have a local JSON file for resume data
 function Home() {
-  const [resumeData, setResumeData] = useState({});
   const [projects, setProjects] = useState([]);
   // const token = process.env.REACT_APP_TOKEN;
 
@@ -19,18 +19,6 @@ function Home() {
   );
   // console.log(process.env.REACT_APP_PUBLIC_URL);
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    fetch("/resumeData.json")
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to load resume data");
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setResumeData(data);
-      })
-      .catch((err) => console.error(err.message));
-  }, []);
 
   // Fetch all projects on component mount
   useEffect(() => {
