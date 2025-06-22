@@ -6,31 +6,30 @@ import { useRef } from "react";
 const Portfolio = ({ data, loading }) => {
   const containerRef = useRef(null);
   const cardsRef = useRef([]);
-
   useGSAP(() => {
-    // Animate cards on scroll
     cardsRef.current.forEach((card, i) => {
       gsap.fromTo(
         card,
-        { opacity: 0, y: 60 },
+        {
+          opacity: 0,
+          y: 60,
+          scale: 0.98,
+        },
         {
           opacity: 1,
           y: 0,
-          duration: 1,
-          ease: "power3.out",
-          delay: i * 0.15,
+          scale: 1,
+          duration: 1.2, // slower duration
+          ease: "power2.inOut", // smooth easing
+          delay: i * 0.06, // slight stagger
           scrollTrigger: {
             trigger: card,
             start: "top 85%",
             toggleActions: "play none none none",
-            scrub: true,
           },
         }
       );
-    });
 
-    // Apply 3D tilt effect
-    cardsRef.current.forEach((card) => {
       VanillaTilt.init(card, {
         max: 15,
         speed: 400,
@@ -40,6 +39,8 @@ const Portfolio = ({ data, loading }) => {
       });
     });
   }, [data]);
+  
+  
 
   const addToRefs = (el) => {
     if (el && !cardsRef.current.includes(el)) {
