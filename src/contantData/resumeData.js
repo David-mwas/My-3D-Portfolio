@@ -1,7 +1,7 @@
 export const resumeData = {
   main: {
     name: "David Mwangi Wanjiru",
-    occupation: "Frontend Developer && Technical Lead @MMUSTihub",
+    occupation: "Frontend Developer && Mobile Developer",
     description: "",
     image: "mwas1.webp",
     bio: "I'm a Mobile and Frontend Software Developer proficient in React Native, Expo, Git, ReactJS, Next.js, and Tailwind CSS. With expertise in JavaScript, Typescript and Node.js, I craft seamless mobile apps, web experiences and responsive designs.I prioritize software quality and efficient workflows.Passionate about bug tracking and resolution, I'm committed to excellence in software development.Currently I'm The Frontend Developer and Technical Lead @MMUSTihub, I'm dedicated to continuous learning and innovation.",
@@ -40,8 +40,8 @@ export const resumeData = {
       {
         school: "Masinde Murilo University Of Science And Technology",
         degree: "Bachelor's Degree, Information Technology",
-        graduated: "Final Year",
-        description: "Awaiting for graduation in December 2025",
+        graduated: "Awaiting for graduation in 2025",
+        description: "Awaiting for graduation in 5th December 2025",
       },
     ],
     work: [
