@@ -4,7 +4,7 @@ import ProjectUpload from "./pages/ProjectUpload";
 import Login from "./pages/Login";
 import { SplitText, ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
-// import { SpeedInsights } from "@vercel/speed-insights/react";
+
 
 const App = () => {
   gsap.registerPlugin(SplitText, ScrollTrigger);
@@ -14,7 +14,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/project/add" element={<ProjectUpload />} />
-        {/* <SpeedInsights /> */}
       </Routes>
     </Router>
   );

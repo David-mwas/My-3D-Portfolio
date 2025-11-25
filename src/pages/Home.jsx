@@ -10,6 +10,7 @@ import Portfolio from "../Components/Portfolio";
 import "../App.css";
 
 import { resumeData } from "../contantData/resumeData"; // Assuming you have a local JSON file for resume data
+import { SpeedInsights } from "@vercel/speed-insights/react";
 function Home() {
   const [projects, setProjects] = useState([]);
   // const token = process.env.REACT_APP_TOKEN;
@@ -62,6 +63,7 @@ function Home() {
       <Testimonials data={resumeData.testimonials} />
       <Contact data={resumeData.main} />
       <Footer data={resumeData.main} />
+       <SpeedInsights />
     </div>
   );
 }
