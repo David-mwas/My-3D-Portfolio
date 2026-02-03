@@ -46,7 +46,7 @@ useEffect(() => {
   };
 
   fetchProjects();
-}, []);
+}, [token]);
 
 
   // Handle file input changes
