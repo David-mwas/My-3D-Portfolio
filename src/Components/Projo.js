@@ -78,7 +78,7 @@ useEffect(() => {
         {
           method: "POST",
           headers: {
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRtd2FzNzA0QGdtYWlsLmNvbSIsImlhdCI6MTczMDAzMjAwNSwiZXhwIjoxNzYxNTg5NjA1LCJhdWQiOiI2NjIzOTM1Y2ZlMGI4ZDJiOTgyMjQ3Y2IiLCJpc3MiOiJhcHBsaWNhdGlvbiJ9.tg3k_cfvrYWi3FO8-6F1ethCuBXuWoJN8bx-HADoPXw`,
+            Authorization: `Bearer ${token}`,
           },
           body: formData, // send formData
         }
@@ -113,7 +113,7 @@ useEffect(() => {
         {
           method: "DELETE",
           headers: {
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRtd2FzNzA0QGdtYWlsLmNvbSIsImlhdCI6MTczMDAzMjAwNSwiZXhwIjoxNzYxNTg5NjA1LCJhdWQiOiI2NjIzOTM1Y2ZlMGI4ZDJiOTgyMjQ3Y2IiLCJpc3MiOiJhcHBsaWNhdGlvbiJ9.tg3k_cfvrYWi3FO8-6F1ethCuBXuWoJN8bx-HADoPXw`,
+            Authorization: `Bearer ${token}`,
           },
         }
       );
