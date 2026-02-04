@@ -3,10 +3,10 @@
 export const resumeData = {
   main: {
     name: "David Mwangi Wanjiru",
-    occupation: "Software Developer | Frontend Developer & Mobile Developer",
+    occupation: "Web & Mobile Developer focused on modern JavaScript and Typescript applications",
     description: "",
     image: "mwas1.webp",
-    bio: "Software Developer with experience building scalable web and mobile applications using React, Next.js, React Native, JavaScript, and TypeScript. Skilled at turning ideas and designs into functional products, debugging and improving codebases, and collaborating with cross-functional teams. Passionate about problem-solving, learning fast, and contributing to impactful technology, especially in EdTech and social innovation spaces.",
+    bio: "Web & Mobile Developer with experience building scalable web and mobile applications using React, Next.js, React Native, JavaScript, and TypeScript. Skilled at turning ideas and designs into functional products, debugging and improving codebases, and collaborating with cross-functional teams. Passionate about problem-solving, learning fast, and contributing to impactful technology, especially in EdTech and social innovation spaces.",
     contactmessage: "Get in touch with me",
     email: "dmwas704@gmail.com",
     phone: "+254 795290373",
