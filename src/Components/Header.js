@@ -15,11 +15,11 @@ const techStack = [
   { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
   { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
   { name: "React", icon: <FaReact />, color: "#61DAFB" },
-  { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
+  { name: "Next.js", icon: <SiNextdotjs />, color: "#FFFFFF" },
   { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
   { name: "React Native", icon: <FaReact />, color: "#61DAFB" },
   { name: "MERN", icon: <SiMongodb />, color: "#47A248" },
-  { name: "GoLang", icon: <FaGolang />, color: "#61DAFB" },
+  { name: "GoLang", icon: <FaGolang />, color: "#00ADD8" },
 ];
 
 const Header = ({ data }) => {
@@ -212,20 +212,20 @@ const Header = ({ data }) => {
             </a>
             . {description}
           </h3>
-          <div className="tech-container flex flex-wrap gap-4 mt-6 w-full items-center justify-center">
+          <div className="tech-container flex flex-wrap gap-4 mt-8 w-full items-center justify-center">
             {techStack?.map((tech, index) => (
               <div
                 key={index}
                 ref={(el) => (badgeRefs.current[index] = el)}
-                className="badge flex items-center font-[500] px-4 py-2 rounded-md text-base transition duration-300 ease-in-out uppercase bg-[blueviolet] text-white"
+                className="badge flex items-center font-[500] px-4 py-2 rounded-lg text-base transition-all duration-300 ease-in-out uppercase bg-slate-800/80 backdrop-blur-md border border-[blueviolet]/30 hover:border-[blueviolet] hover:shadow-[0_0_15px_rgba(138,43,226,0.4)] text-white/90"
               >
                 <span
-                  className="mr-2 text-3xl text-center shadow-xl shadow-black"
+                  className="mr-3 text-2xl text-center"
                   style={{ color: tech.color }}
                 >
                   {tech.icon}
                 </span>
-                <span>{tech.name}</span>
+                <span className="tracking-wide text-sm">{tech.name}</span>
               </div>
             ))}
           </div>
