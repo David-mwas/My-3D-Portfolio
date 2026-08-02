@@ -55,15 +55,33 @@ const Resume = ({ data }) => {
         </div>
 
         <div className="row education">
-          <div className="three columns header-col">
+          <div className="three columns header-col flex flex-col items-center">
             <h1>
               <span>Education</span>
             </h1>
           </div>
 
           <div className="nine columns main-col">
-            <div className="row item">
-              <div className="twelve columns">{education}</div>
+            <div className="row item flex flex-col md:flex-row items-center md:items-start gap-8">
+              <div className="md:w-2/3 w-full">{education}</div>
+              
+              <motion.div 
+                className="md:w-1/3 w-full flex justify-center mt-6 md:mt-0"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, type: "spring" }}
+              >
+                {/* Wrapper for circular crop and glow */}
+                <div className="relative w-[150px] h-[150px] md:w-[180px] md:h-[180px] rounded-full overflow-hidden shadow-[1px_2px_133px_blueviolet]">
+                  {/* Image zoomed perfectly on face and hat */}
+                  <img 
+                    src="/images/grad.webp" 
+                    alt="Graduation" 
+                    className="w-full h-full object-cover scale-[2.5] origin-[50%_10%] object-[0%_40%]"
+                  />
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>

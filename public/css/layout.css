@@ -546,12 +546,13 @@ ul#nav li.current a {
   padding-bottom: 60px;
 }
 #portfolio h1 {
-  font: 15px/24px "opensans-semibold", sans-serif;
+  font: 18px/24px "opensans-bold", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-align: center;
-  margin-bottom: 48px;
-  color: #95a3a3;
+}
+#portfolio h1 span {
+  border-bottom: 3px solid blueviolet;
+  padding-bottom: 6px;
 }
 
 /* Portfolio Content */

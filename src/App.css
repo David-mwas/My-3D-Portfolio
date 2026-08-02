@@ -4,3 +4,34 @@
   padding: 20px;
 }
 
+#portfolio h1 {
+  font: 18px/24px "opensans-bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #313131;
+}
+#portfolio h1 span {
+  border-bottom: 3px solid blueviolet;
+  padding-bottom: 6px;
+}
+#portfolio .header-col {
+  padding-top: 9px;
+}
+#portfolio .main-col {
+  padding-right: 0%;
+  width: 85%;
+}
+/* Base button hover improvements */
+button, .button {
+  transition: all 0.3s ease !important;
+}
+button:hover, .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(138,43,226,0.6) !important;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
